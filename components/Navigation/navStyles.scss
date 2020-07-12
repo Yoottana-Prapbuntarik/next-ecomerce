@@ -1,0 +1,148 @@
+.nav-box,
+.nav-box-hidden {
+  width: 100%;
+  height: 123px;
+  border-bottom: solid 1px #e4e3e3;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+span{
+  cursor: pointer;
+}
+.menu {
+  height: 123px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.link-item {
+  padding-right: 54px;
+}
+.link-item a {
+  color: #333333;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  position: relative;
+  font-style: 20px;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 5px 0;
+}
+.link-item a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #333;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.link-item a:hover:after{
+  width: 100%;
+  left: 0; 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  width: 130px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 15px;
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.hamburgur-top,
+.hamburgur-middle,
+.hamburgur-bottom {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburgur-container {
+  top: 2%;
+  position: absolute;
+  right: 2%;
+  opacity: 0;
+  cursor: pointer;
+}
+.change-hamburgur-top {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change-hamburgur-middle {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.change-hamburgur-bottom {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-box-hidden {
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    height: 70px;
+    overflow: hidden;
+    border-bottom: solid 1px #e4e3e3;
+  }
+  .nav-box {
+    height: auto;
+    border-bottom: solid 1px #e4e3e3;
+  }
+  .menu {
+    margin-top: 45px;
+    text-align: center;
+    height: auto;
+    display: block;
+  }
+  .menu {
+    .link-item {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .hamburgur-container {
+    transition: 2s;
+    opacity: 1;
+  }
+}
